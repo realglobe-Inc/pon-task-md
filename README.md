@@ -79,10 +79,17 @@ const ponTaskMd = require('pon-task-md')
 
 ;(async () => {
   let run = pon({
-    myTask01: ponTaskMd()
+    'md:html': ponTaskMd(
+      'assets/markdowns',
+      'assets/html',
+      {
+        pattern: '**/*.md',
+        format: 'html'
+      }
+    )
   })
 
-  run('myTask01')
+  run('md:html')
 }).catch((err) => console.error(err))
 
 ```
@@ -98,13 +105,16 @@ Signatures
 ---------
 
 
-### `define(options) -> function`
+### `define(srcDir, destDir, options) -> function`
 
 Define task
 
 | Param | type | Description |
 | ---- | --- | ----------- |
+| srcDir | string |  Source directory name |
+| destDir | string |  Destination directory name |
 | options | Object |  Optional settings |
+| options.pattern | string&#124;string[] |  File name pattern |
 
 
 

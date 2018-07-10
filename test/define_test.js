@@ -20,9 +20,9 @@ describe('define', function () {
   })
 
   it('Define', async () => {
-    let ctx = ponContext()
-    let task = define(
-      `${__dirname}/..`,
+    const ctx = ponContext()
+    const task = define(
+      `${__dirname}/../misc/mocks`,
       `${__dirname}/../tmp/testing-mds`,
       {
         pattern: ['*.md']
