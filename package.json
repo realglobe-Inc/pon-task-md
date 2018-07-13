@@ -1,6 +1,6 @@
 {
   "name": "pon-task-md",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Pon task to convert markdowns",
   "main": "lib",
   "browser": "shim/browser",
